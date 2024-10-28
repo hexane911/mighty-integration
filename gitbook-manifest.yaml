@@ -1,0 +1,42 @@
+name: mighty-widget
+title: Mighty Widget
+script: src/index.tsx
+description: 'Mighty Widget supercharges online learning with powerful gamification tools.'
+scopes: []
+blocks:
+  - id: mighty-widget
+    title: Mighty Widget
+    description: Your Mighty space or course
+  - id: mighty-modal-button
+    title: Mighty Modal
+    description: Your Mighty space or course but in modal
+visibility: unlisted
+organization: 3YqnYCmNIehy2QmyuXAl
+secrets: {}
+icon: ./assets/icon.png
+configurations:
+  space:
+    properties:
+      course:
+        type: string
+        title: Link to course (Optional)
+        description: Link to course to open instead of your space
+      theme:
+        type: string
+        title: Theme
+        description: Application theme
+        default: dark
+        options: ["light", "dark"]
+      partnerId:
+        type: string
+        title: Partner ID
+        description: Your space's name
+      buttonText:
+        type: string
+        title: Button text
+        default: Learn and earn
+        description: Text to display on button for Mighty Modal
+    required:
+      - partnerId
+
+
