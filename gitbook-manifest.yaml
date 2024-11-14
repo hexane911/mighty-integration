@@ -14,6 +14,8 @@ visibility: unlisted
 organization: 3YqnYCmNIehy2QmyuXAl
 secrets: {}
 icon: ./assets/icon.png
+previewImages:
+    - ./assets/preview.png
 configurations:
   space:
     properties:
