@@ -13,6 +13,13 @@ export const formUrl = ({
   
   if (!targetUrl) return `${base}?partnerID=${partnerId}&theme=${theme}`
 
-  return `${targetUrl}?partnerID=${partnerId}&theme=${theme}`
+  let newTarget = targetUrl;
+
+  if (targetUrl[targetUrl.length - 1] === '/') {
+    newTarget = targetUrl.slice(0, - 1)
+  }
+  
+
+  return `${newTarget}?partnerID=${partnerId}&theme=${theme}`
 
 };
