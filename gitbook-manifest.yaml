@@ -19,10 +19,10 @@ previewImages:
 configurations:
   space:
     properties:
-      course:
+      targetUrl:
         type: string
-        title: Link to course (Optional)
-        description: Link to course to open instead of your space
+        title: Target Url (Optional)
+        description: Link to your space's course, leaderboard or auth page
       theme:
         type: string
         title: Theme

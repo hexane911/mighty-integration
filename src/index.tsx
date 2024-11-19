@@ -48,9 +48,9 @@ const webframeModal = createComponent<
 >({
   componentId: "mighty-modal",
   render: async (element, context) => {
-    const { theme, course, partnerId } = context.environment.spaceInstallation.configuration;
+    const { theme, targetUrl, partnerId } = context.environment.spaceInstallation.configuration;
 
-    const url = formUrl({ theme, course, partnerId });
+    const url = formUrl({ theme, targetUrl, partnerId });
     return (
       <modal size="fullscreen">
         <webframe source={{ url }} aspectRatio={0.7}/>
@@ -67,9 +67,9 @@ const webframeBlock = createComponent<
 >({
   componentId: "mighty-widget",
   render: async (element, context) => {
-    const { theme, course, partnerId } = context.environment.spaceInstallation.configuration;
+    const { theme, targetUrl, partnerId } = context.environment.spaceInstallation.configuration;
 
-    const url = formUrl({ theme, course, partnerId });
+    const url = formUrl({ theme, targetUrl, partnerId });
     return {
       type: "block",
       children: [

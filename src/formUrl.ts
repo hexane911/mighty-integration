@@ -1,23 +1,18 @@
 export const formUrl = ({
   partnerId: partnerProvided,
   theme = "dark",
-  course,
+  targetUrl,
 }: {
   partnerId: string;
   theme?: string;
-  course?: string;
+  targetUrl?: string;
 }) => {
   const base = "https://test.mighty.study";
   
   const partnerId = partnerProvided.replaceAll(" ", "_");
-  let middlePart = "";
-  if (!!course) {
-    middlePart = course.replace(base, "");
-  } else {
-    middlePart = `/space/${partnerId}`;
-  }
+  
+  if (!targetUrl) return `${base}?partnerID=${partnerId}&theme=${theme}`
 
-  return `${base}/${middlePart}?partnerID=${partnerId}&theme=${theme}`
-    .replaceAll("//", "/")
-    .replace("https:/", "https://");
+  return `${targetUrl}?partnerID=${partnerId}&theme=${theme}`
+
 };
