@@ -7,7 +7,7 @@ export const formUrl = ({
   theme?: string;
   targetUrl?: string;
 }) => {
-  const base = "https://test.mighty.study";
+  const base = "https://app.mighty.study";
   
   const partnerId = partnerProvided.replaceAll(" ", "_");
   
